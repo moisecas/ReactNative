@@ -1,11 +1,23 @@
+import { StatusBar } from 'expo-status-bar'
 import React from 'react'
+import { View, Text, StyleSheet } from 'react-native'
 
 const DataPiker = () => {
   return (
-    <div>
-    DataPiker component here 
-    </div>
-  )
+    <View style={styles.container}>
+        <Text>Open up App.js to start working on your app!</Text>
+        <StatusBar style="auto" />
+    </View>
+    )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+})
 
 export default DataPiker
