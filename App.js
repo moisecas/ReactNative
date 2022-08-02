@@ -1,22 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import DataPiker from './Components/DataPiker';
+import CustomDatePicker from './src/Components/DataPiker';
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-      <DataPiker/>
+    <View style={{ flex: 1, marginTop:50}}>
+      
+        <View  style={{ marginHorizontal:20}} >
+        <Text>Date</Text> 
+        <CustomDatePicker  
+            textStyle={{
+              paddingvertical:10,
+              paddinghorizontal:10,
+              borderColor:'#000',
+              borderWidth:1, 
+            }}
+          />
+
+
+        </View>
+
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App; 
+
+
